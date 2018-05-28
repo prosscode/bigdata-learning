@@ -1,6 +1,3 @@
-
-package org.pross.stageHDFS;
-
 import java.util.Arrays;
 
 import org.apache.hadoop.fs.FileStatus;

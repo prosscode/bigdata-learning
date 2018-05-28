@@ -1,5 +1,3 @@
-package org.pross.utils;
-
 import java.util.Random;
 
 import org.apache.hadoop.conf.Configuration;

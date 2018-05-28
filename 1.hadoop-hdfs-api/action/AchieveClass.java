@@ -1,5 +1,3 @@
-package org.pross.day01;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
