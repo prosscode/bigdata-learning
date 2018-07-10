@@ -1,0 +1,36 @@
+广告流量【实时】统计
+技术分析：
+      [SparkStreaming]
+      Storm
+数据：
+    广告流量点击数据
+    广告对于一个网站来说是一个主要的收入
+    数据埋点
+
+需求分析：
+   1）【实时】统计【每天】【各省】【热门】广告（分组求广告点击次数多的TopN ）
+   2）实时统计某个阶段广告投放趋势
+      window
+数据调研：
+timestamp:
+        时间戳，用户点击广告的时间
+province:
+        省份，用户在哪个省份点击的广告
+city:
+        城市，用户在哪个城市点击的广告
+userid:
+        用户的唯一标识
+advid:
+        被点击的广告id
+
+
+对于大家来说数据源在Kafka里面
+
+
+
+SparkCore:
+       数据源：HDFS
+SparkSQL:
+       数据源：Hive Mysql
+SparkStremaing:
+       数据源：Kafka

@@ -1,0 +1,53 @@
+我们最后的目的：
+实时展示今天的一个饼状图：
+品类，出现的次数
+电视剧，40
+电影，50
+在我们看来其实这就是一个单词计数的效果
+只不过这个效果具有累计的功能。
+
+1）读取到数据
+2）遍历每一行数据
+3）形成一个tuple:
+   key:  日期_品类
+   value:1L
+4） 累加操作：
+   a)updateStateByKey
+   b)reduceByKey
+   c)xxxx
+5）把结果要存入hbase
+   涉及到表如何设计（f）
+    rowkey如何设计：
+    rowkey:日期
+    family：f
+    q:品类
+    value: count
+
+    rowkey如何设计：
+    rowkey:日期_品类
+    family:f
+    q:a
+    value:count
+
+    2018-05-23_电影 23
+    2018-05-23_电视剧 11
+    2018-05-24_电影 23
+    2018-05-24_电视剧 11
+       rowkey:支持左匹配
+
+ <property>
+  <name>hbase.rootdir</name>
+  <value>hdfs://hadoop1:9000/mybase</value>
+ </property>
+ <property>
+ <name>hbase.cluster.distributed</name>
+ <value>true</value>
+ </property>
+ <property>
+ <name>hbase.zookeeper.quorum</name>
+ <value>hadoop1</value>
+ </property>
+ <property>
+    <name>zookeeper.znode.parent</name>
+    <value>/mybase</value>
+ </property>
