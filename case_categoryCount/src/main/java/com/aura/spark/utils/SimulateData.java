@@ -9,7 +9,7 @@ public class SimulateData {
     public static void main(String[] args) {
         BufferedWriter bw=null;
         try {
-             bw = new BufferedWriter(new FileWriter("D:\\1711班\\第二十五天\\资料\\data.txt"));
+             bw = new BufferedWriter(new FileWriter("D:\\data.txt"));
             int i=0;
             while(i < 20000){
                 long time = System.currentTimeMillis();
