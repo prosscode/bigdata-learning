@@ -6,6 +6,10 @@
 
     <groupId>groupId</groupId>
     <artifactId>bigdata-learning-case</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>hadoop-yarn</module>
+    </modules>
 
 </project>
